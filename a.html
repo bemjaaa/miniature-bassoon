@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Tu carta interactiva de San Valentín!</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', sans-serif;
+            background-color: #f4e1d2;
+            text-align: center;
+            padding: 50px;
+        }
+        .pagina {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+        .pagina.active {
+            display: block;
+        }
+        h1 {
+            color: #ff4d4d;
+            font-size: 36px;
+        }
+        h2 {
+            font-size: 28px;
+            color: #ff7f7f;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .boton {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ff4d4d;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .boton:hover {
+            background-color: #cc0000;
+        }
+        .emoji {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pagina active" id="pagina1">
+        <h1>¡Bienvenida a tu Aventura de San Valentín, Javiera! 💖</h1>
+        <p>Estás a punto de embarcarte en una historia épica de amor, ¡y tú decides el destino! 🏰</p>
+        <h2>Tu primera misión: ¿Aceptas ser mi San Valentín? 😍</h2>
+        <a href="#" class="boton" onclick="irPagina(2)">¡Sí! Claro que sí, me encantó la idea 💘</a>
+        <a href="#" class="boton" onclick="irPagina(3)">Mmm, no estoy segura... 😅</a>
+    </div>
+
+    <div class="pagina" id="pagina2">
+        <h1>¡Genial, Javiera! 💕</h1>
+        <p>Has aceptado ser mi San Valentín, y con eso mi corazón ha explotado de felicidad. 🥰💥</p>
+        <p>¿Qué te gustaría hacer ahora? 📖</p>
+        <a href="#" class="boton" onclick="irPagina(4)">¡Un picnic en el parque! 🌳</a>
+        <a href="#" class="boton" onclick="irPagina(5)">¡A ver una película romántica en casa! 🎬</a>
+    </div>
+
+    <div class="pagina" id="pagina3">
+        <h1>¡Oh no! 😱</h1>
+        <p>¿Estás segura de que no quieres ser mi San Valentín? Mi corazón está a punto de apagarse como una computadora sin batería... 😢</p>
+        <h2>¡Pero no todo está perdido! ¿Te arrepientes? 🧐</h2>
+        <a href="#" class="boton" onclick="irPagina(2)">¡Sí, cambio de opinión! 💖</a>
+        <a href="#" class="boton" onclick="irPagina(6)">¡No, lo siento mucho! 😭</a>
+    </div>
+
+    <div class="pagina" id="pagina4">
+        <h1>¡Un picnic, excelente elección! 🍓🌞</h1>
+        <p>Pasamos un día increíble, comiendo fresas, riendo y hablando hasta que el sol se pone. Un momento perfecto.</p>
+        <p>¿Y luego qué? 🎉</p>
+        <a href="#" class="boton" onclick="irPagina(7)">¡Un paseo por la playa! 🏖️</a>
+        <a href="#" class="boton" onclick="irPagina(8)">¡Un baile bajo las estrellas! 🌟</a>
+    </div>
+
+    <div class="pagina" id="pagina5">
+        <h1>¡Película romántica, gran plan! 🎥</h1>
+        <p>Nos acurrucamos en el sofá, con palomitas de maíz y un maratón de películas de amor. Todo perfecto. 💕</p>
+        <p>¿Qué pasa después? 🧐</p>
+        <a href="#" class="boton" onclick="irPagina(7)">¡Un paseo por la playa! 🏖️</a>
+        <a href="#" class="boton" onclick="irPagina(8)">¡Un baile bajo las estrellas! 🌟</a>
+    </div>
+
+    <div class="pagina" id="pagina6">
+        <h1>¡Nooo, Javiera! 😭</h1>
+        <p>¿De verdad me dejas con el corazón roto? 😔 Mi sistema de amor acaba de entrar en "modo de depresión".</p>
+        <p>Pero no te preocupes, siempre puedo volver a encender mi corazón... con un poco de chocolate. 🍫</p>
+        <a href="#" class="boton" onclick="irPagina(1)">¡Regresar a la primera página! 💌</a>
+    </div>
+
+    <div class="pagina" id="pagina7">
+        <h1>¡Un paseo por la playa! 🌊</h1>
+        <p>Con las olas rompiendo en la orilla y el viento acariciando nuestro rostro, caminamos juntos por la playa. Perfecto.</p>
+        <p>¡Qué más podemos hacer? 🥳</p>
+        <a href="#" class="boton" onclick="irPagina(9)">¡Vamos a hacer castillos de arena! 🏰</a>
+        <a href="#" class="boton" onclick="irPagina(10)">¡A ver el atardecer juntos! 🌅</a>
+    </div>
+
+    <div class="pagina" id="pagina8">
+        <h1>¡Un baile bajo las estrellas! 💃🌟</h1>
+        <p>La música suena suave, las estrellas brillan en el cielo, y nos abrazamos mientras bailamos como si no hubiera mañana. 💞</p>
+        <p>¿Qué seguimos haciendo? 🎉</p>
+        <a href="#" class="boton" onclick="irPagina(9)">¡Vamos a hacer castillos de arena! 🏰</a>
+        <a href="#" class="boton" onclick="irPagina(10)">¡A ver el atardecer juntos! 🌅</a>
+    </div>
+
+    <div class="pagina" id="pagina9">
+        <h1>¡Castillos de arena! 🏖️</h1>
+        <p>Construimos el castillo más hermoso de todos, y al final, nos tumbamos a mirar el cielo. ¿El resultado? ¡Una tarde perfecta! 🌞</p>
+        <a href="#" class="boton" onclick="irPagina(10)">Vamos a ver el atardecer ahora... 🌅</a>
+    </div>
+
+    <div class="pagina" id="pagina10">
+        <h1>¡El atardecer es increíble! 🌅</h1>
+        <p>Nos sentamos juntos, viendo cómo el sol se oculta y pintamos de colores el cielo. En este momento, el mundo se detiene.</p>
+        <p>¡Nuestro San Valentín ha sido perfecto! 💖</p>
+        <a href="#" class="boton" onclick="irPagina(1)">¡Volver a empezar esta aventura! 💌</a>
+    </div>
+
+    <script>
+        function irPagina(paginaId) {
+            // Ocultar todas las páginas
+            var paginas = document.querySelectorAll('.pagina');
+            paginas.forEach(function(pagina) {
+                pagina.classList.remove('active');
+            });
+
+            // Mostrar la página seleccionada
+            var paginaActiva = document.getElementById('pagina' + paginaId);
+            paginaActiva.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
